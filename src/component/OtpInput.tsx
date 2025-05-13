@@ -10,9 +10,11 @@ const codeStyle = {
 	borderRadius: "8px",
 	fontSize: "24px",
 	height: "48px",
-	paddingLeft: "7px",
+	padding: "15px",
 	backgroundColor: "white",
 	border: "1px solid black",
+	// display: "flex",
+	// justifyContent: "center",
 } as const;
 
 export default function OTPInput() {
