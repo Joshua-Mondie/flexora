@@ -11,7 +11,7 @@ import WeightLossProgram from "./WeightLossProgram";
 import ChooseFitnessGoal from "./ChooseFitnessGoal";
 import { TiArrowBackOutline } from "react-icons/ti";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 import logoB from "@/assets/logoBrem.png";
 
 const MultiStepForm = () => {
@@ -30,8 +30,8 @@ const MultiStepForm = () => {
 					<TiArrowBackOutline size={24} color="#FD6202" />
 				</Link>
 				<span className=" font-bold  flex justify-center pl-8 items-center">
-					<Image
-						src={logoB}
+					<img
+						src={logoB.src}
 						alt="Logo"
 						height={43}
 						// width={151}

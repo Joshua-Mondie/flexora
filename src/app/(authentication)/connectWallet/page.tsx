@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import bgimg from "@/assets/connectwalletbgImg.png";
 
 import cryptoWallet from "@/assets/cryptoWallet.png";
-import Image from "next/image";
+// import Image from "next/image";
 
 const Page = () => {
 	const router = useRouter();
@@ -38,7 +38,12 @@ const Page = () => {
 			</div>
 
 			<div className="m-5 flex flex-col items-center">
-				<Image src={cryptoWallet} alt="cryptoWallet" width={150} height={150} />
+				<img
+					src={cryptoWallet.src}
+					alt="cryptoWallet"
+					width={150}
+					height={150}
+				/>
 				<h2 className="font-inter font-medium text-xl text-center text-[#FD6202] mt-4">
 					Wallet connected Successfully
 				</h2>

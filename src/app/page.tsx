@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.png";
 import logoB from "@/assets/logoBrem.png";
-import Image from "next/image";
+// import Image from "next/image";
 import { SiWalletconnect } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
 import { RiMailFill } from "react-icons/ri";
@@ -38,7 +38,7 @@ export default function Home() {
 					transition={{ duration: 1 }}
 					className="flex items-center justify-center h-screen bg-white flex-col"
 				>
-					<Image src={logo} alt="Logo" height={132} width={151} />
+					<img src={logo.src} alt="Logo" height={132} width={151} />
 					<h1 className=" text-2xl">Fitness made easy...</h1>
 				</motion.div>
 			) : (
@@ -56,8 +56,8 @@ export default function Home() {
 				>
 					{/* <div className=" border border-white w-screen justify-center flex"> */}
 					<span className=" font-bold  flex justify-center pl-8 items-center">
-						<Image
-							src={logoB}
+						<img
+							src={logoB.src}
 							alt="Logo"
 							height={132}
 							// width={151}
