@@ -42,9 +42,11 @@ const Page = () => {
 				<OTPInput />
 
 				<div className="grid gap-2 justify-center mt-8">
-					<button className="bg-primary transition p-3 rounded-lg text-white text-sm  font-inter w-[321px]">
-						Connect Wallet to login
-					</button>
+					<Link href="/connectWallet">
+						<button className="bg-primary transition p-3 rounded-lg text-white text-sm  font-inter w-[321px]">
+							Connect Wallet to login
+						</button>
+					</Link>
 					<button className="border-primary border transition p-3 rounded-lg text-black text-sm  font-inter w-[321px]">
 						Resend Confirmation Code
 					</button>
