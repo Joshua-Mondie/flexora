@@ -33,9 +33,9 @@ const MultiStepForm = () => {
 					<img
 						src={logoB.src}
 						alt="Logo"
-						height={43}
+						// height={43}
 						// width={151}
-						className=""
+						className="h-[43px]"
 					/>{" "}
 					<h1 className="text-[8.87px] font-bold text-[#E86514] -translate-x-6 translate-y-2 font-inknut">
 						LEXORA
