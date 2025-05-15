@@ -13,9 +13,12 @@ import { TiArrowBackOutline } from "react-icons/ti";
 import Link from "next/link";
 // import Image from "next/image";
 import logoB from "@/assets/logoBrem.png";
+import { useSearchParams } from "next/navigation";
 
 const MultiStepForm = () => {
-	const [step, setStep] = useState(0);
+	const searchParams = useSearchParams();
+	const initialStep = Number(searchParams.get("step") || 0); // default to 0
+	const [step, setStep] = useState(initialStep);
 	const totalSteps = 3;
 
 	const nextStep = () => setStep((prev) => Math.min(prev + 1, totalSteps - 1));
@@ -56,7 +59,7 @@ const MultiStepForm = () => {
 			{/* Step content */}
 			{step === 0 && <ChooseGender onNext={nextStep} />}
 			{step === 1 && <ChooseFitnessGoal onNext={nextStep} />}
-			{step === 2 && <WeightLossProgram onNext={nextStep} />}
+			{step === 2 && <WeightLossProgram />}
 		</div>
 	);
 };

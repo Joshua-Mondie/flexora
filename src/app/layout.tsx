@@ -2,6 +2,7 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
+import { CompletionProvider } from "@/context/CompletionContext";
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -20,7 +21,7 @@ export default function RootLayout({
 				data-new-gr-c-s-check-loaded="14.1233.0"
 				data-gr-ext-installed=""
 			>
-				{children}
+				<CompletionProvider>{children}</CompletionProvider>
 			</body>
 		</html>
 	);
