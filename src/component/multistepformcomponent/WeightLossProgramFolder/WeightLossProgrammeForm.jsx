@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 // components/steps/ChooseGender.tsx
-const WeightLossProgram = ({ onNext }: { onNext: () => void }) => {
+const WeightLossProgram = ({ onNext }) => {
 	const subSteps = ["Body analysis", "Activity level", "Lifestyle"];
 	const [subStep, setSubStep] = useState(0); // Tracks current step
 	const progressPercent = ((subStep + 1) / subSteps.length) * 100;

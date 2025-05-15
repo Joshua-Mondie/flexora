@@ -2,7 +2,7 @@
 "use client";
 
 // components/steps/ChooseGender.tsx
-const WeightLossProgram = ({ onNext }: { onNext: () => void }) => {
+const WeightLossProgram = ({ onNext }) => {
 	return (
 		<div className="text-center">
 			<h2 className="text-xl font-bold mb-2">

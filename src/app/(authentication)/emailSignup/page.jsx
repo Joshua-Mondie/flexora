@@ -3,10 +3,10 @@
 
 import React from "react";
 // import bgimg from "../../../assets/emailbgimg.png";
-import bgimg from "@/assets/emailbgimg.png";
+// import bgimg from "assets/emailbgimg.png";
 import { TiArrowBackOutline } from "react-icons/ti";
 // import TextField from "@mui/material/TextField";
-import OrangeTextField from "@/component/FloatingInputcomponent";
+// import OrangeTextField from "@/component/FloatingInputcomponent";
 import Link from "next/link";
 // import FloatingInput from "@/component/FloatingInputcomponent";
 
@@ -17,7 +17,7 @@ const Page = () => {
 			<div
 				className=" border h-45 border-white px-7 py-6 bg-cover bg-center "
 				style={{
-					backgroundImage: ` url(${bgimg.src})`,
+					backgroundImage: "assets/emailbgimg.png",
 				}}
 			>
 				<Link href="/">
@@ -33,13 +33,13 @@ const Page = () => {
 
 			<div className="m-5 ">
 				<h1 className="mb-8 font-inter text-sm font-normal">User Details</h1>
-				<div className="relative w-full">
+				{/* <div className="relative w-full">
 					<OrangeTextField label="Email*" placeholder="johndoe@gmail.com" />
 				</div>
 				<div className="relative w-full mt-8 grid gap-2">
 					<OrangeTextField label="firstname*" placeholder="Joshua" />
 					<OrangeTextField label="lastname*" placeholder="Daniel" />
-				</div>
+				</div> */}
 			</div>
 			<p className="font-normal text-xs font-inter text-center text-[#5E6368]">
 				A confirmation mail will be sent to your mail to check authenticity
