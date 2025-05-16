@@ -14,11 +14,11 @@ const goals = [
 ];
 
 const levels = ["Newbie", "Intermediate", "Advanced"];
-const ChooseFitnessGoal = ({ onNext }: { onNext: () => void }) => {
-	const [selectedGoals, setSelectedGoals] = useState<string[]>([]);
-	const [selectedLevel, setSelectedLevel] = useState<string | null>(null);
+const ChooseFitnessGoal = ({ onNext }) => {
+	const [selectedGoals, setSelectedGoals] = useState([]);
+	const [selectedLevel, setSelectedLevel] = useState(null);
 
-	const toggleGoal = (goal: string) => {
+	const toggleGoal = (goal) => {
 		setSelectedGoals((prev) => {
 			if (prev.includes(goal)) {
 				return prev.filter((g) => g !== goal);

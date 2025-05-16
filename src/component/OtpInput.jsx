@@ -15,7 +15,7 @@ const codeStyle = {
 	border: "1px solid black",
 	// display: "flex",
 	// justifyContent: "center",
-} as const;
+};
 
 export default function OTPInput() {
 	return (
