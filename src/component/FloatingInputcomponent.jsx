@@ -4,7 +4,7 @@
 import React from "react";
 import TextField, { TextFieldProps } from "@mui/material/TextField";
 
-const OrangeTextField: React.FC<TextFieldProps> = (props) => {
+const OrangeTextField = (props) => {
 	return (
 		<TextField
 			fullWidth

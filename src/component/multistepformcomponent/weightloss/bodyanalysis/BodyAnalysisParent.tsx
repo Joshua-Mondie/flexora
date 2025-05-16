@@ -1,9 +1,9 @@
 /** @format */
 "use client";
 
-import { useCompletion } from "@/context/CompletionContext";
 import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
+import { useCompletion } from "../../../../context/CompletionContext";
 // import Height from "./Height";
 
 const BodyAnalysis = () => {
@@ -16,8 +16,9 @@ const BodyAnalysis = () => {
 
 	const { markStepCompleted } = useCompletion();
 
+	const STEP_INDEX = 0;
 	const handleComplete = () => {
-		markStepCompleted(0); // Step 0 completed
+		markStepCompleted(STEP_INDEX);
 	};
 
 	useEffect(() => {
@@ -26,7 +27,7 @@ const BodyAnalysis = () => {
 			const timeout = setTimeout(() => {
 				setSubStep(0);
 				setIsFirstLoad(false);
-			}, 1000); // Show pre-step message for 1 second
+			}, 4000); // Show pre-step message for 1 second
 
 			return () => clearTimeout(timeout);
 		}
@@ -54,9 +55,16 @@ const BodyAnalysis = () => {
 
 			{/* Content */}
 			{subStep === -1 ? (
-				<p className="text-center text-gray-500 mb-4">
-					Preparing your onboarding...
-				</p>
+				<div>
+					<p className="text-center text-black mb-4 font-light text-[203px] tabular-nums">
+						1
+					</p>
+					<h1 className="font-bold text-2xl text-center">BODY ANALYSIS</h1>
+					<p className="font-medium text-[16px] font-inter text-center">
+						Flexora will create the most efective fitness program for you based
+						on your body analysis
+					</p>
+				</div>
 			) : (
 				<>
 					<h2 className="text-lg font-semibold mb-4">{subSteps[subStep]}</h2>

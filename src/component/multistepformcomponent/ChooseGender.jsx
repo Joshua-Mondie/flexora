@@ -1,10 +1,10 @@
 /** @format */
-import female from "@/assets/female.png";
-import male from "@/assets/male.png";
+import female from "../../../public/assets/female.png";
+import male from "../../../public/assets/male.png";
 
 // import Image from "next/image";
 // components/steps/ChooseGender.tsx
-const ChooseGender = ({ onNext }: { onNext: () => void }) => {
+const ChooseGender = ({ onNext }) => {
 	return (
 		<div className="">
 			<h2 className="text-2xl font-inter font-bold mb-2 text-center">

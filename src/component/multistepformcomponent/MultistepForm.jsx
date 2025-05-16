@@ -12,7 +12,7 @@ import ChooseFitnessGoal from "./ChooseFitnessGoal";
 import { TiArrowBackOutline } from "react-icons/ti";
 import Link from "next/link";
 // import Image from "next/image";
-import logoB from "@/assets/logoBrem.png";
+import logoB from "../../../public/assets/logoBrem.png";
 import { useSearchParams } from "next/navigation";
 
 const MultiStepForm = () => {

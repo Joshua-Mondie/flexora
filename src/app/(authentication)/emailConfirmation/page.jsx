@@ -3,12 +3,13 @@
 
 import React from "react";
 // import bgimg from "../../../assets/emailbgimg.png";
-import bgimg from "@/assets/emailbgimg2.png";
+// import bgimg from "assets/emailbgimg2.png";
 import { TiArrowBackOutline } from "react-icons/ti";
 // import TextField from "@mui/material/TextField";
 // import OrangeTextField from "@/component/FloatingInputcomponent";
 import Link from "next/link";
-import OTPInput from "@/component/OtpInput";
+import OTPInput from "../../../component/OtpInput";
+import backgroundImage from "../../../../public/assets/emailbgimg2.png";
 // import FloatingInput from "@/component/FloatingInputcomponent";
 
 const Page = () => {
@@ -18,7 +19,7 @@ const Page = () => {
 			<div
 				className=" border h-45 border-white px-7 py-6 bg-cover bg-center "
 				style={{
-					backgroundImage: ` url(${bgimg.src})`,
+					backgroundImage: `url(${backgroundImage.src})`,
 				}}
 			>
 				<Link href="/">

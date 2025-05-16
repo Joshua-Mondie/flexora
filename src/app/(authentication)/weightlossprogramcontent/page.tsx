@@ -3,10 +3,10 @@
 // app/weightlossprogramcontent/page.tsx
 import React from "react";
 import { useSearchParams } from "next/navigation";
-import { CompletionProvider } from "@/context/CompletionContext";
-import BodyAnalysis from "@/component/multistepformcomponent/weightloss/bodyanalysis/BodyAnalysisParent";
-import LifestyleParent from "@/component/multistepformcomponent/weightloss/lifestyle/LifestyleParent";
-import ActivityLevelParent from "@/component/multistepformcomponent/weightloss/activitylevel/ActivityLevelParent";
+// import { CompletionProvider } from "../../../context/CompletionContext";
+import BodyAnalysis from "../../../component/multistepformcomponent/weightloss/bodyanalysis/BodyAnalysisParent";
+import ActivityLevelParent from "../../../component/multistepformcomponent/weightloss/activitylevel/ActivityLevelParent";
+import LifestyleParent from "../../../component/multistepformcomponent/weightloss/lifestyle/LifestyleParent";
 
 const Page = () => {
 	const searchParams = useSearchParams();
@@ -23,9 +23,9 @@ const Page = () => {
 	}
 
 	return (
-		<CompletionProvider>
-			<div>{content}</div>
-		</CompletionProvider>
+		// <CompletionProvider>
+		<div>{content}</div>
+		// </CompletionProvider>
 	);
 };
 

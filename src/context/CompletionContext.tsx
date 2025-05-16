@@ -1,29 +1,21 @@
 /** @format */
 
-// context/CompletionContext.tsx
+// context/CompletionContext.js
 "use client";
 import React, { createContext, useState, useContext } from "react";
 
-type CompletionContextType = {
-	completedSteps: number[];
-	markStepCompleted: (stepIndex: number) => void;
-};
+const CompletionContext = createContext(undefined);
 
-const CompletionContext = createContext<CompletionContextType | undefined>(
-	undefined
-);
+export const CompletionProvider = ({ children }) => {
+	const [completedSteps, setCompletedSteps] = useState([]);
 
-export const CompletionProvider = ({
-	children,
-}: {
-	children: React.ReactNode;
-}) => {
-	const [completedSteps, setCompletedSteps] = useState<number[]>([]);
-
-	const markStepCompleted = (stepIndex: number) => {
-		setCompletedSteps((prev) =>
-			prev.includes(stepIndex) ? prev : [...prev, stepIndex]
-		);
+	const markStepCompleted = (stepIndex) => {
+		console.log("Marking step as completed:", stepIndex);
+		setCompletedSteps((prev) => {
+			const updated = prev.includes(stepIndex) ? prev : [...prev, stepIndex];
+			console.log("Updated completedSteps:", updated);
+			return updated;
+		});
 	};
 
 	return (
@@ -35,7 +27,8 @@ export const CompletionProvider = ({
 
 export const useCompletion = () => {
 	const context = useContext(CompletionContext);
-	if (!context)
+	if (!context) {
 		throw new Error("useCompletion must be used within CompletionProvider");
+	}
 	return context;
 };

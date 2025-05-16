@@ -3,9 +3,11 @@
 
 import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import bgimg from "@/assets/connectwalletbgImg.png";
+import bgimg from "../../../../public/assets/connectwalletbgImg.png";
 
-import cryptoWallet from "@/assets/cryptoWallet.png";
+// import cryptoWallet from "../../../../assets/cryptoWallet.png";
+import cryptoWallet from "../../../../public/assets/cryptoWallet.png";
+
 // import Image from "next/image";
 
 const Page = () => {
